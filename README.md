@@ -1,11 +1,5 @@
 # The RESUMEBEAR
 
-.
-
-
-
-
-
 ## Stacks
 
 - TypeScript
@@ -14,10 +8,6 @@
 - Express js
 - MongoDB
 - Cloudinary (for image hosting)
-
-
-
-
 
 ## Server Installation
 
@@ -45,7 +35,3 @@ CLOUDINARY_API_SECRET=
 ```
 npm run dev
 ```
-
-
-
-

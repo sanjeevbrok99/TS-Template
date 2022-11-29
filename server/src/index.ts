@@ -4,16 +4,8 @@ import express from 'express';
 import cors from 'cors';
 import { connectDb } from './database';
 import {
-  productRoutes,
-  authRoutes,
-  cartRoutes,
-  bannerRoutes,
-  categoryRoutes,
-  checkOutRoutes,
-  orderRoutes,
+  authRoutes,  
   userRoutes,
-  dashboardRoutes,
-  wishlistRoutes,
 } from './routes';
 import { PORT } from './config';
 import passport from 'passport';
@@ -34,15 +26,8 @@ const start = async () => {
 
   // setup routes
   app.use('/api/auth', authRoutes);
-  app.use('/api/banners', bannerRoutes);
-  app.use('/api/categories', categoryRoutes);
-  app.use('/api/wishlist', wishlistRoutes);
-  app.use('/api/cart', cartRoutes);
-  app.use('/api/checkout', checkOutRoutes);
-  app.use('/api/orders', orderRoutes);
-  app.use('/api/products', productRoutes);
   app.use('/api/users', userRoutes);
-  app.use('/api/dashboard', dashboardRoutes);
+
 
   app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
